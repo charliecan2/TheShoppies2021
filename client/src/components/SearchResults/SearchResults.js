@@ -1,13 +1,17 @@
 import React from 'react';
 import './SearchResults.css';
-import { Card } from 'react-bootstrap';
 
-function SearchResults() {
+function SearchResults(props) {
     return (
-        <Card className="resultsCard">
-            <Card.Title className="resultsTitle">Results from</Card.Title>
-        </Card>
+        <div className="d-flex">
+            {props.movies.map((movie, index) => 
+                <div className="justify-content-start m-3">
+                    <img src={movie.Poster} alt="moviePoster"/>
+                </div>
+            )} 
+        </div>
+
     )
 }
 
-export default SearchResults
+export default SearchResults;
