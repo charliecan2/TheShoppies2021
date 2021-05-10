@@ -19,15 +19,19 @@ const App = () => {
   }, [search])
 
   useEffect(() => {
-    const savedNominees = JSON.parse(localStorage.getItem("nominee"));
-    setNominees(savedNominees);
+    checkSavedNominees();
   }, [])
 
-  useEffect(() => {
-    if (nominees.length === 0){
-      localStorage.setItem("nominee", JSON.stringify([]))
+  const checkSavedNominees = () => {
+    const savedNominees = JSON.parse(localStorage.getItem("nominee"));
+    
+    if (savedNominees){
+      setNominees(savedNominees);
     }
-  }, [nominees.length])
+    else {
+      setNominees([])
+    }
+  }
 
   function onChange(event){
     const { value } = event.target;
