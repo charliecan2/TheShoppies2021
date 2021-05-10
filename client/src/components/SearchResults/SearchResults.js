@@ -9,7 +9,7 @@ function SearchResults(props) {
             {!props.movies.length ? 
             <Card className="noResultsCard">
                 <Card.Title className="noResults">
-                    No search results to display yet
+                    No search results to display yet.
                 </Card.Title>
             </Card> :
             <div />
