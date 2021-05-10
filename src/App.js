@@ -121,6 +121,7 @@ const App = () => {
       onHide={handleClose}
       keyboard={false}
       animation={true}
+      centered
       >
         <Modal.Header>
           <Modal.Title>Max Nominees Reached</Modal.Title>
