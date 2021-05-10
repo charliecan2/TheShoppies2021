@@ -7,16 +7,3 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
-.formInput {
-  position: relative;
-}
-.movieInput {
-  padding-left: 40px;
-}
-.searchIcon {
-  position: absolute;
-  left: 0;
-  top: 8px;
-  padding: 9px 8px;
-  color: #aaa;
-}
