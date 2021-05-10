@@ -60,6 +60,10 @@ const App = () => {
       setDisabled(disabledList);
   
       localStorage.setItem("nominee", JSON.stringify(nomineeList));
+
+      if (nominees.length === 4){
+        setShow(true)
+      }
     }
   }
 
