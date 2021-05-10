@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import Header from '../src/components/Header/Header';
 import SearchBar from '../src/components/SearchBar/SearchBar';
 import SearchResults from '../src/components/SearchResults/SearchResults';
@@ -13,6 +13,7 @@ const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [nominees, setNominees] = useState([]);
   const [disabled, setDisabled] = useState([]);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     searchMovie(search)
@@ -49,12 +50,17 @@ const App = () => {
   };
 
   const nominateMovie = async (movie) => {
-    const nomineeList = [...nominees, movie]
-    setNominees(nomineeList);
-    const disabledList = [...disabled, movie.imdbID]
-    setDisabled(disabledList);
-
-    localStorage.setItem("nominee", JSON.stringify(nomineeList))
+    if (nominees.length === 5){
+      setShow(true)
+    }
+    else if (nominees.length < 5){
+      const nomineeList = [...nominees, movie]
+      setNominees(nomineeList);
+      const disabledList = [...disabled, movie.imdbID]
+      setDisabled(disabledList);
+  
+      localStorage.setItem("nominee", JSON.stringify(nomineeList));
+    }
   }
 
   const removeNomination = (id) => {
@@ -72,6 +78,8 @@ const App = () => {
     setNominees(filteredNominees);
     localStorage.setItem("nominee", JSON.stringify(filteredNominees));
   }
+
+  const handleClose = () => setShow(false);
 
   return (
     <Container fluid className="movieApp">
@@ -104,6 +112,22 @@ const App = () => {
             <Nominees nominees={nominees} removeNomination={removeNomination}/>
           </Col>
       </Row>
+      <Modal 
+      show={show} 
+      onHide={handleClose}
+      backdropClassName="static"
+      keyboard={false}
+      >
+        <Modal.Header>
+          <Modal.Title>Max Nominees Reached</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Congratulations, you've finished nominating five movies for a Shoppy award! You won't be able to add any more to the list, but you can still change it by removing a movie and adding another.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleClose}>Okay</Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 }
