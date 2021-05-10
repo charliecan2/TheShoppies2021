@@ -18,13 +18,18 @@ const App = () => {
     searchMovie(search)
   }, [search])
 
+  useEffect(() => {
+    const savedNominees = JSON.parse(localStorage.getItem("nominee"));
+    setNominees(savedNominees)
+  }, [])
+
   function onChange(event){
     const { value } = event.target;
     setSearch(value);
   }
 
-  const searchMovie = async (search) => {
-    await axios.get(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=a1e90d82`)
+  const searchMovie = (search) => {
+    axios.get(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=a1e90d82`)
     .then(res => {
       if(res.data.Search){
         setSearchResults(res.data.Search)
@@ -38,6 +43,8 @@ const App = () => {
     setNominees(nomineeList);
     const disabledList = [...disabled, movie.imdbID]
     setDisabled(disabledList);
+
+    localStorage.setItem("nominee", JSON.stringify(nomineeList))
   }
 
   const removeNomination = (id) => {
@@ -53,6 +60,7 @@ const App = () => {
     })
     setDisabled(filteredNomineesID);
     setNominees(filteredNominees);
+    localStorage.setItem("nominee", JSON.stringify(filteredNominees));
   }
 
   return (
