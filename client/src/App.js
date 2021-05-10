@@ -20,8 +20,14 @@ const App = () => {
 
   useEffect(() => {
     const savedNominees = JSON.parse(localStorage.getItem("nominee"));
-    setNominees(savedNominees)
+    setNominees(savedNominees);
   }, [])
+
+  useEffect(() => {
+    if (nominees.length === 0){
+      localStorage.setItem("nominee", JSON.stringify([]))
+    }
+  }, [nominees.length])
 
   function onChange(event){
     const { value } = event.target;
