@@ -1,0 +1,12 @@
+.nominateBanner {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: white;
+}
+.movieTitle {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.nominateBtn {
+  margin-bottom: 10px;
+}

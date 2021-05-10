@@ -11,6 +11,7 @@ import axios from 'axios';
 const App = () => {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [nominees, setNominees] = useState([]);
 
   useEffect(() => {
     searchMovie(search)
@@ -31,20 +32,48 @@ const App = () => {
     .catch(err => console.log(err))
   };
 
+  const nominateMovie = async (movie) => {
+    const nomineeList = [...nominees, movie]
+    setNominees(nomineeList);
+  }
+
+  const removeNomination = (id) => {
+    let filteredNominees = nominees.filter(nominee => {
+      if (nominee.imdbID !== id){
+        return nominee
+      }
+    });
+    setNominees(filteredNominees);
+  }
+
   return (
     <Container fluid className="movieApp">
       <Header />
       <SearchBar 
       onChange={onChange}
-      searchMovie={searchMovie}
       value={search}
       />
       <Row>
-        <SearchResults movies={searchResults} />
+        <Col>
+          <h4 className="searchResultsHeader">Search Results</h4>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <SearchResults 
+          movies={searchResults}
+          nominateMovie={nominateMovie}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h4 className="searchResultsHeader">Nominees</h4>
+        </Col>
       </Row>
       <Row>
           <Col>
-            <Nominees />
+            <Nominees nominees={nominees} removeNomination={removeNomination}/>
           </Col>
       </Row>
     </Container>
