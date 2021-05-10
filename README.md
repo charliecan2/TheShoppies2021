@@ -9,7 +9,8 @@ The unofficial site for the annual movie award show, The Shoppies, hosted by Sho
 ## Table of Contents
 
 - [Usage](#usage)
-- [Deployed Application](#Link)
+- [Demonstration](#demonstration)
+- [Deployed Application](#link)
 - [License](#license)
 - [Contributers](#contributors)
 - [Questions](#questions)
@@ -17,6 +18,8 @@ The unofficial site for the annual movie award show, The Shoppies, hosted by Sho
 ## Usage
 
 Navigate to the website with the deployed link provided. Once on the site, you can search for a movie by typing down a name onto the search bar. Various matching movies will then show up in the Search Results section. To nominate a movie, simply hover your mouse over the movie poster and click on the "Nominate" button. When you hover over the movie poster, you will also see the full title over the movie followed by the release year.
+
+## Demonstration
 
 ![](./gifs/example2.gif)
 
