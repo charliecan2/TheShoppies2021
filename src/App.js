@@ -18,6 +18,21 @@ const App = () => {
     searchMovie(search)
   }, [search])
 
+  useEffect(() => {
+    checkSavedNominees();
+  }, [])
+
+  const checkSavedNominees = () => {
+    const savedNominees = JSON.parse(localStorage.getItem("nominee"));
+    
+    if (savedNominees){
+      setNominees(savedNominees);
+    }
+    else {
+      setNominees([])
+    }
+  }
+
   function onChange(event){
     const { value } = event.target;
     setSearch(value);
