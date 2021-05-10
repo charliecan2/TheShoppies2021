@@ -13,8 +13,8 @@ function NominateBtn(props) {
             </Row>
             <Row>
                 <Col>
-                    <Button className="nominateBtn" onClick={() => props.nominateMovie(props.movie)}>
-                        <span className="mr-2" >Nominate</span> 
+                    <Button className="nominateBtn" onClick={() => {props.nominateMovie(props.movie)}} disabled={props.disabled.indexOf(props.movie.imdbID) !== -1}>
+                        <span className="mr-2">Nominate</span> 
                         <TrophyFill />
                     </Button>
                 </Col>

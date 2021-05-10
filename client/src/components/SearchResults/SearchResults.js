@@ -11,14 +11,13 @@ function SearchResults(props) {
                 <Card.Title className="noResults">
                     No search results to display yet
                 </Card.Title>
-            </Card>
-            :
+            </Card> :
             <div />
             }
             {props.movies.map((movie, index) => 
                 <div className="image-container justify-content-start m-3">
                     <img src={movie.Poster} alt="moviePoster"/>
-                    <div className="d-flex align-items-center overlay justify-content-center"><NominateBtn movie={movie} title={movie.Title} year={movie.Year} nominateMovie={props.nominateMovie}/></div>
+                    <div className="d-flex align-items-center overlay justify-content-center"><NominateBtn movie={movie} title={movie.Title} year={movie.Year} nominateMovie={props.nominateMovie} disabled={props.disabled}/></div>
                 </div>
             )} 
         </div>

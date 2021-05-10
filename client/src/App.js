@@ -12,6 +12,7 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [nominees, setNominees] = useState([]);
+  const [disabled, setDisabled] = useState([])
 
   useEffect(() => {
     searchMovie(search)
@@ -35,14 +36,22 @@ const App = () => {
   const nominateMovie = async (movie) => {
     const nomineeList = [...nominees, movie]
     setNominees(nomineeList);
+    const disabledList = [...disabled, movie.imdbID]
+    setDisabled(disabledList);
   }
 
   const removeNomination = (id) => {
+    let filteredNomineesID = nominees.filter(nominee => {
+      if (nominee.imdbID !== id){
+        return nominee.imdbID
+      }
+    })
     let filteredNominees = nominees.filter(nominee => {
       if (nominee.imdbID !== id){
         return nominee
       }
     });
+    setDisabled(filteredNomineesID)
     setNominees(filteredNominees);
   }
 
@@ -62,6 +71,7 @@ const App = () => {
         <Col>
           <SearchResults 
           movies={searchResults}
+          disabled={disabled}
           nominateMovie={nominateMovie}
           />
         </Col>
