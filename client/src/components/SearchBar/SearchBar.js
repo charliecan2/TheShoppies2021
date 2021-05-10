@@ -12,11 +12,10 @@ function SearchBar(props) {
                 <Card>
                     <Card.Body>
                         <Form>
-                            <Form.Group className="formInput">
+                            <Form.Group>
                                 <FormLabel className="movieTitleSearch">Movie Title</FormLabel>
                                 <InputGroup className="movieSearch">
-                                    <Search className="searchIcon" />
-                                    <FormControl className="movieInput" value={props.value} placeholder="Search for Movies Here" onChange={props.onChange} />
+                                    <FormControl value={props.value} placeholder="Search for Movies Here" onChange={props.onChange} />
                                 </InputGroup>
                             </Form.Group>
                         </Form>
