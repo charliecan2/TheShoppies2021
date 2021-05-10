@@ -119,8 +119,8 @@ const App = () => {
       <Modal 
       show={show} 
       onHide={handleClose}
-      backdropClassName="static"
       keyboard={false}
+      animation={true}
       >
         <Modal.Header>
           <Modal.Title>Max Nominees Reached</Modal.Title>
