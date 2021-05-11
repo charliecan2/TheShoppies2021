@@ -17,7 +17,7 @@ The unofficial site for the annual movie award show, The Shoppies, hosted by Sho
 
 ## Usage
 
-Navigate to the website with the deployed link provided. Once on the site, you can search for a movie by typing down a name onto the search bar. Various matching movies will then show up in the Search Results section. To nominate a movie, simply hover your mouse over the movie poster and click on the "Nominate" button. When you hover over the movie poster, you will also see the full title over the movie followed by the release year.
+Navigate to the website with the deployed link provided. Once on the site, you can search for a movie by typing down a name onto the search bar. Various matching movies will then show up in the Search Results section. To nominate a movie, simply hover your mouse over the movie poster and click on the "Nominate" button. When you hover over the movie poster, you will also see the full title over the movie followed by the release year. To remove a movie from the nominations list, hover over the poster in that list and click on the "Remove" button. Once five nominees are selected, you'll be met with a modal that notifies you that you're all done! And if you refresh the page, you'll notice that your nominated movies are still there. That's because they are stored in local storage.
 
 ## Demonstration
 
