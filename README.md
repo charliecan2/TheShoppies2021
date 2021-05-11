@@ -4,7 +4,7 @@
 
 ## Description
 
-The unofficial site for the annual movie award show, The Shoppies, hosted by Shopify! This site uses the OMDB API to search for movies and nominate them for a Shoppie award.
+The unofficial site for the annual movie award show, The Shoppies, hosted by Shopify! This React application uses the OMDB API to search for movies and nominate them for a Shoppie award.
 
 ## Table of Contents
 
