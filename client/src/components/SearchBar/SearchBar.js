@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col, Form ,FormControl, Card, FormLabel } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Search } from 'react-bootstrap-icons'
 import './SearchBar.css'
 
 

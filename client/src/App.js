@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Button, Alert } from 'react-bootstrap';
 import Header from '../src/components/Header/Header';
 import SearchBar from '../src/components/SearchBar/SearchBar';
 import SearchResults from '../src/components/SearchResults/SearchResults';
@@ -25,12 +25,15 @@ const App = () => {
 
   const checkSavedNominees = () => {
     const savedNominees = JSON.parse(localStorage.getItem("nominee"));
+    const disabledIDs = JSON.parse(localStorage.getItem("disabled"));
     
     if (savedNominees){
       setNominees(savedNominees);
+      setDisabled(disabledIDs);
     }
     else {
       setNominees([])
+      setDisabled([])
     }
   }
 
@@ -60,6 +63,7 @@ const App = () => {
       setDisabled(disabledList);
   
       localStorage.setItem("nominee", JSON.stringify(nomineeList));
+      localStorage.setItem("disabled", JSON.stringify(disabledList));
 
       if (nominees.length === 4){
         setShow(true)
@@ -78,9 +82,12 @@ const App = () => {
         return disabledID
       }
     })
-    setDisabled(filteredNomineesID);
+
     setNominees(filteredNominees);
+    setDisabled(filteredNomineesID);
+
     localStorage.setItem("nominee", JSON.stringify(filteredNominees));
+    localStorage.setItem("disabled", JSON.stringify(filteredNomineesID));
   }
 
   const handleClose = () => setShow(false);
@@ -88,6 +95,7 @@ const App = () => {
   return (
     <Container fluid className="movieApp">
       <Header />
+      {nominees.length === 5 && <Alert variant="info">Five Nominees have been selected! Thank you for your responses.</Alert>}
       <SearchBar 
       onChange={onChange}
       value={search}
