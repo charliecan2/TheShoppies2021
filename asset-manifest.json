@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/TheShoppies2021/static/css/main.71feaac8.chunk.css",
-    "main.js": "/TheShoppies2021/static/js/main.288bb2f1.chunk.js",
-    "main.js.map": "/TheShoppies2021/static/js/main.288bb2f1.chunk.js.map",
-    "runtime-main.js": "/TheShoppies2021/static/js/runtime-main.b02ef4de.js",
-    "runtime-main.js.map": "/TheShoppies2021/static/js/runtime-main.b02ef4de.js.map",
+    "main.css": "/TheShoppies2021/static/css/main.05054f75.chunk.css",
+    "main.js": "/TheShoppies2021/static/js/main.7c51ab3c.chunk.js",
+    "main.js.map": "/TheShoppies2021/static/js/main.7c51ab3c.chunk.js.map",
+    "runtime-main.js": "/TheShoppies2021/static/js/runtime-main.590b16be.js",
+    "runtime-main.js.map": "/TheShoppies2021/static/js/runtime-main.590b16be.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/TheShoppies2021/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.d13c7bff.chunk.js": "/TheShoppies2021/static/js/2.d13c7bff.chunk.js",
-    "static/js/2.d13c7bff.chunk.js.map": "/TheShoppies2021/static/js/2.d13c7bff.chunk.js.map",
-    "static/js/3.87ab6df3.chunk.js": "/TheShoppies2021/static/js/3.87ab6df3.chunk.js",
-    "static/js/3.87ab6df3.chunk.js.map": "/TheShoppies2021/static/js/3.87ab6df3.chunk.js.map",
+    "static/js/2.a62523d4.chunk.js": "/TheShoppies2021/static/js/2.a62523d4.chunk.js",
+    "static/js/2.a62523d4.chunk.js.map": "/TheShoppies2021/static/js/2.a62523d4.chunk.js.map",
+    "static/js/3.d02d58f1.chunk.js": "/TheShoppies2021/static/js/3.d02d58f1.chunk.js",
+    "static/js/3.d02d58f1.chunk.js.map": "/TheShoppies2021/static/js/3.d02d58f1.chunk.js.map",
     "index.html": "/TheShoppies2021/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/TheShoppies2021/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.71feaac8.chunk.css.map": "/TheShoppies2021/static/css/main.71feaac8.chunk.css.map",
-    "static/js/2.d13c7bff.chunk.js.LICENSE.txt": "/TheShoppies2021/static/js/2.d13c7bff.chunk.js.LICENSE.txt"
+    "static/css/main.05054f75.chunk.css.map": "/TheShoppies2021/static/css/main.05054f75.chunk.css.map",
+    "static/js/2.a62523d4.chunk.js.LICENSE.txt": "/TheShoppies2021/static/js/2.a62523d4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b02ef4de.js",
+    "static/js/runtime-main.590b16be.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.d13c7bff.chunk.js",
-    "static/css/main.71feaac8.chunk.css",
-    "static/js/main.288bb2f1.chunk.js"
+    "static/js/2.a62523d4.chunk.js",
+    "static/css/main.05054f75.chunk.css",
+    "static/js/main.7c51ab3c.chunk.js"
   ]
 }
